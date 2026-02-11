@@ -30,9 +30,8 @@ Una aplicación web simple que permite insertar y mostrar texto en pantalla medi
 
 3. **Navegación por teclado:**
    - **Tab**: Navegar entre elementos
-   - **Enter**: Agregar texto
-   - **Ctrl + Enter**: Agregar texto desde el campo de entrada
-   - **Arrow Down/Up**: Navegación rápida entre input y botón
+   - **Enter**: Agregar texto desde el campo o botón
+   - **↓ / ↑**: Navegación rápida entre campo y botón
 
 ### Estructura del proyecto
 

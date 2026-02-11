@@ -22,11 +22,9 @@ const textManager = {
             this.addText();
         });
 
-        // Evento de teclado en el input (Ctrl + Enter)
+        // Evento de teclado en el input (Enter)
         this.inputElement.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && e.ctrlKey) {
-                this.addText();
-            } else if (e.key === 'Enter') {
+            if (e.key === 'Enter') {
                 this.addText();
             }
         });
