@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Display App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplicación de Texto</h1>
+        <div class="input-section">
+            <label for="textInput">Ingresa tu texto:</label>
+            <textarea id="textInput" rows="4" placeholder="Escribe algo aquí..."></textarea>
+            <button id="displayBtn">Mostrar Texto</button>
+            <button id="clearBtn">Limpiar</button>
+        </div>
+        <div class="output-section">
+            <h2>Texto en pantalla:</h2>
+            <div id="textOutput" class="output-box">
+                <p class="placeholder">El texto ingresado aparecerá aquí...</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
