@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #667eea;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.input-section {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s;
+    margin-bottom: 15px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#clearBtn {
+    background: #6c757d;
+}
+
+#clearBtn:hover {
+    background: #5a6268;
+}
+
+.output-section {
+    margin-top: 30px;
+}
+
+.output-box {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 100px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.output-box.has-content {
+    background: #e7f3ff;
+    border-color: #667eea;
+}
