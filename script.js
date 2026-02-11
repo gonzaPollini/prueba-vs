@@ -59,6 +59,57 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 8000);
     }
 
+    // Function to create error crosses effect
+    function createErrorCrosses() {
+        // Create container for crosses if it doesn't exist
+        let crossContainer = document.getElementById('crossContainer');
+        if (!crossContainer) {
+            crossContainer = document.createElement('div');
+            crossContainer.id = 'crossContainer';
+            document.body.appendChild(crossContainer);
+        }
+
+        // Clear previous crosses
+        crossContainer.innerHTML = '';
+        
+        // Create 40 error crosses
+        for (let i = 0; i < 40; i++) {
+            setTimeout(() => {
+                const cross = document.createElement('div');
+                cross.className = 'error-cross';
+                cross.innerHTML = '✕';
+                
+                // Random position across the width
+                cross.style.left = Math.random() * 100 + '%';
+                
+                // Random animation duration (1.5-4 seconds)
+                const duration = 1.5 + Math.random() * 2.5;
+                cross.style.animationDuration = duration + 's';
+                
+                // Random delay
+                cross.style.animationDelay = Math.random() * 0.3 + 's';
+                
+                // Random size (0.8x to 1.8x)
+                const scale = 0.8 + Math.random();
+                cross.style.fontSize = (30 * scale) + 'px';
+                
+                crossContainer.appendChild(cross);
+                
+                // Remove cross after animation
+                setTimeout(() => {
+                    cross.remove();
+                }, duration * 1000 + 500);
+            }, i * 40); // Stagger creation
+        }
+        
+        // Auto-remove container after all animations
+        setTimeout(() => {
+            if (crossContainer && crossContainer.childNodes.length === 0) {
+                crossContainer.remove();
+            }
+        }, 7000);
+    }
+
     // Function to display text
     function displayText() {
         const inputValue = textInput.value.trim();
@@ -70,9 +121,15 @@ document.addEventListener('DOMContentLoaded', function() {
             textOutput.textContent = inputValue;
             textOutput.classList.add('has-content');
             
+            const lowerValue = inputValue.toLowerCase();
+            
             // Check if the input is "gremy" (case insensitive)
-            if (inputValue.toLowerCase() === 'gremy') {
+            if (lowerValue === 'gremy') {
                 createStarShower();
+            }
+            // Check if the input is one of the error words
+            else if (lowerValue === 'picana' || lowerValue === 'polli' || lowerValue === 'rojin') {
+                createErrorCrosses();
             }
         }
     }
